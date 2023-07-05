@@ -25,7 +25,7 @@ def ChatPDF(text):
 # st.write(kawałki)
 # tworzenie osadzeń
 
-    OPENAI_API_KEY = st.text_input("OPENAI API KEY", type = "password")
+    OPENAI_API_KEY = st.text_input("KLUCZ OPENAI API", type = "password")
     if OPENAI_API_KEY:
         embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 # st.write("Utworzono osadzanie")
