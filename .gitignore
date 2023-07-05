@@ -1,0 +1,163 @@
+.gitattributes
+
+# Pliki skompilowane bajtowo / zoptymalizowane / DLL
+__pycache__/
+*.py[cod]
+*$py.class
+
+# rozszerzenia C
+*.so
+
+# Dystrybucja / pakowanie
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstalator
+# Zwykle te pliki są zapisywane przez skrypt Pythona z szablonu
+# zanim PyInstaller zbuduje exe, aby wstrzyknąć do niego datę/inne informacje.
+*.manifest
+*.spec
+
+# Dzienniki instalatora
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Raporty z testów jednostkowych / pokrycia
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Tłumaczenia
+*.mo
+*.pot
+
+# Rzeczy Django:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+# W przypadku biblioteki lub pakietu możesz chcieć zignorować te pliki, ponieważ kod jest
+# przeznaczony do pracy w wielu środowiskach; w przeciwnym razie zaewidencjonuj je:
+# .python-wersja
+
+# pipenv
+# Zgodnie z pypa/pipenv#598, zaleca się włączenie Pipfile.lock do kontroli wersji.
+# Jednak w przypadku współpracy, jeśli masz zależności lub zależności specyficzne dla platformy
+# nie mając wsparcia dla wielu platform, pipenv może instalować zależności, które nie działają lub nie
+# zainstaluj wszystkie potrzebne zależności.
+#Pipfile.lock
+
+# poezja
+# Podobnie jak w przypadku Pipfile.lock, ogólnie zaleca się włączenie poezji.lock do kontroli wersji.
+# Jest to szczególnie zalecane w przypadku pakietów binarnych, aby zapewnić powtarzalność i nie tylko
+# często ignorowane w przypadku bibliotek.
+# https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poezja.blokada
+
+# pdm
+# Podobnie jak w przypadku Pipfile.lock, generalnie zaleca się włączenie pdm.lock do kontroli wersji.
+#pdm.blokada
+# pdm przechowuje konfiguracje całego projektu w .pdm.toml, ale zaleca się, aby go nie uwzględniać
+# w kontroli wersji.
+# https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Środowiska
+.env
+.venv
+.vscode
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ustawienia projektu Spyder
+.spyderproject
+.spyproject
+
+# Ustawienia projektu linowego
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Kontroler typu stosu
+.pyre/
+
+# statyczny analizator typów pytype
+.pytype/
+
+# Symbole debugowania Cythona
+cython_debug/
+
+#PyCharm
+# Specyficzny szablon JetBrains jest przechowywany w oddzielnym pliku JetBrains.gitignore, który może
+# można znaleźć na https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+# i można je dodać do globalnego gitignore lub scalić z tym plikiem. Dla bardziej nuklearnego
+# opcja (niezalecana) możesz odkomentować następujące elementy, aby zignorować cały folder pomysłów.
+#.pomysł/
