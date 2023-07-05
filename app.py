@@ -9,9 +9,9 @@ from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 
 def ChatPDF(text):
-    # st.write(text)
+# st.write(tekst)
     
-    #split into chunks
+# podzielić na kawałki
     text_splitter = CharacterTextSplitter(
         separator="\n",
         chunk_size = 1000,
@@ -20,23 +20,23 @@ def ChatPDF(text):
     )
 
     chunks = text_splitter.split_text(text)
-    # st.write(chunks)
-    # creating embeddings
+# st.write(kawałki)
+# tworzenie osadzeń
 
     OPENAI_API_KEY = st.text_input("OPENAI API KEY", type = "password")
     if OPENAI_API_KEY:
         embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
-        # st.write("Embedding Created")
-        # st.write(embeddings)
+# st.write("Utworzono osadzanie")
+# st.write(osadzenia)
         knowledge_base = FAISS.from_texts(chunks, embeddings)
-        st.write("Knowledge Base created ")
-        #show user input
+        st.write("Utworzono Bazę Wiedzy ")
+# pokaż dane wprowadzone przez użytkownika
 
         def ask_question(i=0):
-            user_question = st.text_input("Ask a question about your PDF?",key = i)
+            user_question = st.text_input("Zadaj pytanie dotyczące pliku PDF?",key = i)
             if user_question:
                 docs = knowledge_base.similarity_search(user_question)
-                # st.write(docs)
+# st.write(docs)
 
                 llm = OpenAI(openai_api_key=OPENAI_API_KEY)
                 chain = load_qa_chain(llm, chain_type="stuff")
@@ -49,7 +49,7 @@ def ChatPDF(text):
         ask_question()
 
 def main():
-    st.set_page_config(page_title="Ask ur PDF",
+    st.set_page_config(page_title="Zapytaj o PDF",
                        page_icon="📄")
 
     hide_st_style = """
@@ -61,54 +61,54 @@ def main():
     """
     st.markdown(hide_st_style, unsafe_allow_html=True)
 
-    # st.write(st.set_page_config)
-    st.header("Ask your PDF 🤔💭")
+# st.write(st.set_page_config)
+    st.header("Zapytaj swojego PDF_a 😎💭")
     
-    #uploading file
-    pdf = st.file_uploader("Upload your PDF ", type="pdf")
+# przesyłanie pliku
+    pdf = st.file_uploader("Prześlij plik PDF ", type="pdf")
 
-    # extract the text
+# wyodrębnij tekst
     if pdf is not None:
-        option = st.selectbox("What you want to do with PDF📜", [
-            "Meta Data📂",
-            "Extract Raw Text📄",
-            "Extract Links🔗",
-            "Extract Images🖼️",
-            "Make PDF password protected🔐",
-            "PDF Annotation📝",
-            "ChatPDF💬"
+        option = st.selectbox("Co chcesz zrobić z plikiem PDF 📜", [
+            "Metadane 📂",
+            "Wyodrębnij surowy tekst 📄",
+            "Wyodrębnij linki 🔗",
+            "Wyodrębnij obrazy 🖼️",
+            "Zabezpiecz PDF hasłem 🔐",
+            "Adnotacja PDF 📝",
+            "Chat_PDF 💬"
             ])
         pdf_reader = PdfReader(pdf)
         text = ""
         for page in pdf_reader.pages:
             text += page.extract_text()
-        if option == "Meta Data📂":
+        if option == "Metadene 📂":
             st.write(pdf_reader.metadata)
-        elif option == "Make PDF password protected🔐":
-            pswd = st.text_input("Enter yourpass word", type="password")
+        elif option == "Zabezpiecz PDF hasłem 🔐":
+            pswd = st.text_input("Wprowadź hasło", type="password")
             if pswd:
-                with st.spinner("Encrypting..."):
+                with st.spinner("Szyfrowanie..."):
                     pdf_writer = PdfWriter()
                     for page_num in range(len(pdf_reader.pages)):
                         pdf_writer.add_page(pdf_reader.pages[page_num])
                         
                     pdf_writer.encrypt(pswd)
-                    with open(f"{pdf.name.split('.')[0]}_encrypted.pdf", "wb") as f:
+                    with open(f"{pdf.name.split('.')[0]}_szyfrowany.pdf", "wb") as f:
                         pdf_writer.write(f)
 
-                    st.success("Encryption Successful!")
+                    st.success("Szyfrowano pomyślne!")
                     st.download_button(
-                        label="Download Encrypted PDF",
-                        data=open(f"{pdf.name.split('.')[0]}_encrypted.pdf", "rb").read(),
-                        file_name=f"{pdf.name.split('.')[0]}_encrypted.pdf",
+                        label="Pobierz zaszyfrowany plik PDF",
+                        data=open(f"{pdf.name.split('.')[0]}_szyfrowany.pdf", "rb").read(),
+                        file_name=f"{pdf.name.split('.')[0]}_szyfrowany.pdf",
                         mime="application/octet-stream",
                     )
                     try:
-                        os.remove(f"{pdf.name.split('.')[0]}_encrypted.pdf")
+                        os.remove(f"{pdf.name.split('.')[0]}_szyfrowany.pdf")
                     except: pass
-        elif option == "Extract Raw Text📄":
+        elif option == "Wyodrębnij surowy tekst 📄":
             st.write(text)
-        elif option == "Extract Links🔗":
+        elif option == "Wyodrębnij linki 🔗":
             for page in pdf_reader.pages:
                 if "/Annots" in page:
                     for annot in page["/Annots"]:
@@ -117,14 +117,14 @@ def main():
                             try:
                                 st.write(annot.get_object()["/A"]["/URI"])
                             except: pass
-        elif option == "Extract Images🖼️":
+        elif option == "Wyodrębnij obrazy 🖼️":
             for page in pdf_reader.pages:
                 try:
                     for img in page.images:
                         st.write(img.name)
                         st.image(img.data)
                 except: pass
-        elif option == "PDF Annotation📝":
+        elif option == "Adnotacja PDF 📝":
             for page in pdf_reader.pages:
                 if "/Annots" in page:
                     for annot in page["/Annots"]:
@@ -133,9 +133,10 @@ def main():
                         st.write("***********")
                         annotation = {"subtype": obj["/Subtype"], "location": obj["/Rect"]}
                         st.write(annotation)
-        elif option == "ChatPDF💬":
+        elif option == "Chat_PDF 💬":
             ChatPDF(text)
     
 
 if __name__ == "__main__":
     main()
+# https://emojipedia.org/ 😎
