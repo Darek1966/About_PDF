@@ -72,7 +72,7 @@ All_About_PDF jest zbudowany przy użyciu następujących technologii:
 ## Stojące wyzwania🤔
 
 📚 Wybór najbardziej odpowiednich bibliotek do projektu, co osiągnęliśmy wybierając Python, Streamlit, PyPDF2 i LangChain.
-🌟 Opracowanie unikalnej funkcji, która odróżnia All_About_PDF od innych internetowych aplikacji PDF. 
+🌟 Opracowanie unikalnej funkcji, która odróżnia All_About_PDF od innych internetowych aplikacji PDF.
 
 Nasza funkcja ChatPDF umożliwia użytkownikom interakcję z plikami PDF za pomocą technologii przetwarzania języka naturalnego OpenAI i LangChain.
 💰 Optymalizacja kosztu przygotowania bazy wiedzy dla ChatPDF poprzez dobór odpowiedniego rozmiaru i proporcji wielkości porcji i wielkości nakładania się.
