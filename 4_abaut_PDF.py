@@ -142,4 +142,4 @@ def main():
 if __name__ == "__main__":
     main()
 # https://emojipedia.org/ 
-# Rozszerzenie > :emojisense: > skrót: Ctrl + i💯💬
+# Rozszerzenie > :emojisense: > skrót: Ctrl + i
