@@ -1,8 +1,0 @@
-
-URUCHAMIANIE
-    1. Otwórz plik .py, który chcesz uruchomić,
-    2. Uruchom -> Uruchom bez debugowania
-
-ZATRZYMANIE
-    1. Prawy górny róg -> kwadrat STOP
-    2. Terminal -> deactivate
