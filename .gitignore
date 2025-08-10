@@ -163,3 +163,4 @@ cython_debug/
 # opcja (niezalecana) możesz odkomentować następujące elementy, aby zignorować cały folder pomysłów.
 #.pomysł/
 .zencoder/
+desktop.ini
