@@ -83,7 +83,7 @@ def main():
         text = ""
         for page in pdf_reader.pages:
             text += page.extract_text()
-        if option == "Metadene 📂":
+        if option == "Metadane 📂":
             st.write(pdf_reader.metadata)
         elif option == "Zabezpiecz PDF hasłem 🔐":
             pswd = st.text_input("Wprowadź hasło", type="password")
