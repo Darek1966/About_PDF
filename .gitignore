@@ -162,3 +162,4 @@ cython_debug/
 # i można je dodać do globalnego gitignore lub scalić z tym plikiem. Dla bardziej nuklearnego
 # opcja (niezalecana) możesz odkomentować następujące elementy, aby zignorować cały folder pomysłów.
 #.pomysł/
+.zencoder/
