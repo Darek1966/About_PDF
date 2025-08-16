@@ -103,12 +103,6 @@ Zachęcamy do współpracy przy rozwoju projektu All_About_PDF! Oto jak możesz 
 * Rozszerzenie funkcji ChatPDF o obsługę większych dokumentów
 * Dodanie wsparcia dla innych języków
 
-## 📄 Licencja
-
-Ten projekt jest udostępniany na licencji MIT. Szczegółowe informacje można znaleźć w pliku [LICENSE](vscode-webview://1qd8v1tula0u43gou3ukfl0snpfh7dthaabr622qdvjsb150mmrk/LICENSE).
-
-![Licencja MIT](https://img.shields.io/badge/Licencja-MIT-blue.svg)
-
 ## 📞 Kontakt
 
 [![Email](https://img.shields.io/badge/Email-Napisz%20do%20mnie-blue?style=for-the-badge&logo=gmail&logoColor=white)](mailto:netdark_1966@op.pl)
@@ -116,4 +110,8 @@ Ten projekt jest udostępniany na licencji MIT. Szczegółowe informacje można 
 [![GitHub](https://img.shields.io/badge/GitHub-Darek1966-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Darek1966)
 
 
+## Licencja
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Ten projekt jest licencjonowany na licencji MIT - zobacz plik [LICENSE](LICENSE).
 ---
