@@ -111,8 +111,9 @@ Ten projekt jest udostępniany na licencji MIT. Szczegółowe informacje można 
 
 ## 📞 Kontakt
 
+[![Email](https://img.shields.io/badge/Email-Napisz%20do%20mnie-blue?style=for-the-badge&logo=gmail&logoColor=white)](mailto:netdark_1966@op.pl)
 
-
+[![GitHub](https://img.shields.io/badge/GitHub-Darek1966-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Darek1966)
 
 
 ---
