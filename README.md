@@ -114,4 +114,5 @@ Zachęcamy do współpracy przy rozwoju projektu All_About_PDF! Oto jak możesz 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Ten projekt jest licencjonowany na licencji MIT - zobacz plik [LICENSE](LICENSE).
+
 ---
